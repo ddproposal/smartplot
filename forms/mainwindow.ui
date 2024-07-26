@@ -14,7 +14,7 @@
    <string>无锡</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="svg.qrc">
+   <iconset resource="../svg.qrc">
     <normaloff>:/qrc/play.svg</normaloff>:/qrc/play.svg</iconset>
   </property>
   <property name="toolButtonStyle">
@@ -53,7 +53,7 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="svg.qrc">
+    <iconset resource="../svg.qrc">
      <normaloff>:/qrc/play.svg</normaloff>
      <normalon>:/qrc/pause.svg</normalon>:/qrc/play.svg</iconset>
    </property>
@@ -69,7 +69,7 @@
   </action>
  </widget>
  <resources>
-  <include location="svg.qrc"/>
+  <include location="../svg.qrc"/>
  </resources>
  <connections/>
 </ui>
