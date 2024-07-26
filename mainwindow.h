@@ -20,6 +20,7 @@ public:
     void AddAction();
     void AddMenu();
 
+
 private:
     Ui::MainWindow *ui;
     QAction* actionDB;

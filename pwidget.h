@@ -8,7 +8,11 @@
 #include <QDesktopWidget>
 
 #include "filedevice.h"
-//#include "showplot.h"
+
+
+#include "showplot.h"
+
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class PWidget; }

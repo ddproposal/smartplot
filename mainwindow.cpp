@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <QAction>
+#include <QDesktopWidget>
 
 MainWindow::MainWindow(QWidget *parent) :
     SARibbonMainWindow(parent),
@@ -11,10 +12,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 //    this->setWindowTitle("诉 讼");
     this->setWindowIcon(QIcon(":/qrc/SA.svg"));
+    resize(QApplication::desktop()->width()/2,QApplication::desktop()->height()/2);
+    move(QApplication::desktop()->width()/4,QApplication::desktop()->height()/4);
 
 
-//    ui->toolBar->setIconSize(QSize(50,60));
-//    AddAction();
+    ui->toolBar->setIconSize(QSize(50,60));
+    AddAction();
 
 //    ui->menubar->setFixedSize(100,40);
 //    AddMenu();
@@ -22,9 +25,14 @@ MainWindow::MainWindow(QWidget *parent) :
         SARibbonBar* bar = ribbonBar();
         bar->applicationButton()->setText(tr("  File  "));
         SARibbonCategory* mainCate = bar->addCategoryPage(tr("DEV"));
-        SARibbonPannel* pannel     = mainCate->addPannel(tr("actions"));
-        pannel->addAction(tr("action1"), QIcon(":/qrc/action.svg"), QToolButton::InstantPopup);
+        mainCate->setContentsMargins(20,0,0,20);
+
+
+        SARibbonPannel* pannel     = mainCate->addPannel(tr("按键"));
+
+        pannel->addAction(tr("action1"), QIcon(":/qrc/action.svg"), QToolButton::MenuButtonPopup);
         pannel->addAction(tr("action2"), QIcon(":/qrc/customize0.svg"), QToolButton::InstantPopup);
+        pannel->addAction(tr("action3"), QIcon(":/qrc/folder-star.svg"), QToolButton::DelayedPopup);
 
 }
 

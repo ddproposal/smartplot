@@ -4,10 +4,13 @@
 #include <iostream>
 #include <vector>
 #include <map>
-#include "matplotlibcpp.h"
+
 #include "filedevice.h"
 
+
+#include "matplotlibcpp.h"
 namespace plt = matplotlibcpp;
+
 
 typedef std::map<std::string, std::vector<std::vector<double>>> map_inf;
 

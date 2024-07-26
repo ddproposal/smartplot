@@ -34,5 +34,5 @@ void PWidget::on_pushButton_clicked()
 
 void PWidget::InitFileDevice(string& filepath)
 {
-    //file->readPlotData(filepath+"plotdataopt.txt", filepath+"plotdatasm.txt", opt, sm, vel, acc,df);
+    file->readPlotData(filepath+"plotdataopt.txt", filepath+"plotdatasm.txt", opt, sm, vel, acc,df);
 }

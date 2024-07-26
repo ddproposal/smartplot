@@ -18,15 +18,19 @@ include($$PWD/SARibbon.pri)
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    filedevice.cpp \
     main.cpp \
     mainwindow.cpp \
     mywidget.cpp \
     pwidget.cpp \
+    showplot.cpp
 
 HEADERS += \
+    filedevice.h \
     mainwindow.h \
     mywidget.h \
     pwidget.h \
+    showplot.h
 
 FORMS += \
     forms/mainwindow.ui \
