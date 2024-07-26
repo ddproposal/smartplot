@@ -2,5 +2,12 @@
     <qresource prefix="/">
         <file>qrc/play.svg</file>
         <file>qrc/pause.svg</file>
+        <file>qrc/test1.svg</file>
+        <file>qrc/save.svg</file>
+        <file>qrc/SA.svg</file>
+        <file>qrc/item.svg</file>
+        <file>qrc/folder-star.svg</file>
+        <file>qrc/customize0.svg</file>
+        <file>qrc/action.svg</file>
     </qresource>
 </RCC>

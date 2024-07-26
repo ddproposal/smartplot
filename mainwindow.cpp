@@ -5,20 +5,26 @@
 #include <QAction>
 
 MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
+    SARibbonMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    this->setWindowTitle("诉 讼");
-    this->setWindowIcon(QIcon(":/qrc/pause.svg"));
+//    this->setWindowTitle("诉 讼");
+    this->setWindowIcon(QIcon(":/qrc/SA.svg"));
 
 
-    ui->toolBar->setIconSize(QSize(50,60));
-    AddAction();
+//    ui->toolBar->setIconSize(QSize(50,60));
+//    AddAction();
 
-    ui->menubar->setFixedSize(100,40);
-    AddMenu();
+//    ui->menubar->setFixedSize(100,40);
+//    AddMenu();
 
+        SARibbonBar* bar = ribbonBar();
+        bar->applicationButton()->setText(tr("  File  "));
+        SARibbonCategory* mainCate = bar->addCategoryPage(tr("DEV"));
+        SARibbonPannel* pannel     = mainCate->addPannel(tr("actions"));
+        pannel->addAction(tr("action1"), QIcon(":/qrc/action.svg"), QToolButton::InstantPopup);
+        pannel->addAction(tr("action2"), QIcon(":/qrc/customize0.svg"), QToolButton::InstantPopup);
 
 }
 
@@ -53,11 +59,11 @@ void MainWindow::AddAction()
 };
 void MainWindow::AddMenu()
 {
-    QMenu* filemenu = ui->menubar->addMenu("文件");
-    filemenu->setFixedSize(70,50);
+    //QMenu* filemenu = ui->menubar->addMenu("文件");
+//    filemenu->setFixedSize(70,50);
 
-    QAction* newfile = filemenu->addAction(QIcon(":/qrc/play.svg"),"新建");
-    QAction* savefile = filemenu->addAction(QIcon(":/qrc/play.svg"),"保存");
+//    QAction* newfile = filemenu->addAction(QIcon(":/qrc/play.svg"),"新建");
+//    QAction* savefile = filemenu->addAction(QIcon(":/qrc/play.svg"),"保存");
 
 
 }
