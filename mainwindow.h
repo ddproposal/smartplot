@@ -19,6 +19,10 @@ public:
 
     void AddAction();
     void AddMenu();
+    void InitSARibbon();
+
+private slots:
+    void actionDB_triggered(bool checked);
 
 
 private:
